@@ -1,5 +1,5 @@
 <template>
-  <MemoForm v-if="memo" memo="memo" />
+  <MemoForm v-if="memo" :memo="memo" />
   <p v-else>指定されたメモはありません</p>
 </template>
 

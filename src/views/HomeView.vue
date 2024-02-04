@@ -36,17 +36,21 @@ ul {
   padding: 0;
 }
 li {
-  margin-bottom: 10px;
-  padding: 10px;
   border-bottom: 1px solid #ccc;
   list-style: none;
 }
 
 li a {
-  color: #999;
+  color: #222;
   text-decoration: none;
   width: 100%;
   display: block;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+li a:hover {
+  background-color: #f0f0f0;
 }
 </style>
 ```
