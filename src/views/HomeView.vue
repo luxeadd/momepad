@@ -5,11 +5,11 @@ export default {
   computed: {
     // メモがあるかどうか
     hasMemos() {
-      return this.$store.getters.getCount
+      return this.$store.getters.getCount;
     },
     // メモ一覧を取得
     memos() {
-      return this.$store.getters.getAll
+      return this.$store.getters.getAll;
     },
   },
 };
@@ -20,7 +20,7 @@ export default {
     <ul v-if="hasMemos">
       <li v-for="memo in memos" :key="memo.id">
         <!-- メモのタイトルをリンクにする -->
-        <router-link :to="{name: 'edit', params: { id: memo.id }}">
+        <router-link :to="{ name: 'edit', params: { id: memo.id } }">
           {{ memo.title }}
         </router-link>
       </li>
@@ -29,8 +29,7 @@ export default {
   </div>
 </template>
 
-
-<style scoped>
+<style lang="scss" scoped>
 ul {
   margin: 0;
   padding: 0;
@@ -38,19 +37,18 @@ ul {
 li {
   border-bottom: 1px solid #ccc;
   list-style: none;
-}
+  a {
+    color: #222;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 20px;
+    transition: background-color 0.3s ease;
 
-li a {
-  color: #222;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  padding: 20px;
-  transition: background-color 0.3s ease;
-}
-
-li a:hover {
-  background-color: #f0f0f0;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
 }
 </style>
 ```
